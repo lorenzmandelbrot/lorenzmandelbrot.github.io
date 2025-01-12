@@ -1,5 +1,26 @@
 title: Lorenz MandelBrot
 description: HFT Market Making
 remote_theme: b2a3e8/jekyll-theme-console
+
+# Theme specific settings
+header_pages:
+  - index.md
+  - about.md
+  - blog.md
+
+style: dark # dark (default) or light
+listen_for_clients_preferred_style: true # true or false (default)
+
+
+# Build settings
+markdown: kramdown
 plugins:
   - jekyll-remote-theme
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .gitignore
