@@ -25,5 +25,10 @@ comments:
   giscus:
     repo: lorenzmandelbrot/lorenzmandelbrot.github.io
     repo-id: R_kgDONpUgBw
-    category: Announcements  # or whatever category you choose from your Discussions
+    category: "Blog Comments"
+    category-id: DIC_kwDONpUgB84Cl9Ea
     mapping: pathname
+    theme: dark
+    reactions-enabled: 1
+    emit-metadata: 0
+    input-position: bottom
