@@ -1,3 +1,29 @@
 title: Lorenz MandelBrot
 description: HFT Market Making
 remote_theme: b2a3e8/jekyll-theme-console
+
+# Site settings
+url: "https://lorenzmandelbrot.github.io"
+baseurl: ""
+
+# Theme settings
+style: dark
+header_pages:
+  - index.md
+  - archive.md
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Comments (using Giscus - GitHub Discussions based)
+comments:
+  giscus:
+    repo: lorenzmandelbrot/lorenzmandelbrot.github.io
+    repo-id: R_kgDONpUgBw
+    category: Announcements  # or whatever category you choose from your Discussions
+    mapping: pathname
