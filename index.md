@@ -11,5 +11,3 @@ Check out recent posts below or head to the [Archive](archive.md) for all posts.
 {% for post in site.posts limit: 5 %}
 - [{{ post.title }}]({{ post.url }})
 {% endfor %}
-
----

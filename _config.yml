@@ -1,43 +1,35 @@
 title: "Lorenz MandelBrot"
 description: "HFT Market Making"
+
 remote_theme: b2a3e8/jekyll-theme-console
 
-# Site settings
+# GitHub Pages site settings
 url: "https://lorenzmandelbrot.github.io"
-baseurl: ""  # Keep this empty for a user/organization site
+baseurl: ""
 
 # Theme settings
-style: dark
+style: dark  # ensures dark console style
 header_pages:
   - index.md
   - archive.md
 
 # Build settings
 markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    css_class: 'highlight'
-    span:
-      line_numbers: false
-    block:
-      line_numbers: true
-      start_line: 1
-
-# GitHub Pages specific settings
-lsi: false
-safe: true
-incremental: false
-highlighter: rouge
-gist:
-  noscript: false
-
 plugins:
   - jekyll-remote-theme
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+
+# Kramdown + Syntax highlighting
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    block:
+      line_numbers: true
+highlighter: rouge
 
 # Comments (using Giscus - GitHub Discussions based)
 comments:

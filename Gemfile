@@ -1,12 +1,15 @@
 source "https://rubygems.org"
 
-gem "github-pages", "~> 231"  # This will ensure GitHub Pages compatibility
-gem "webrick", "~> 1.7"       # needed if running Ruby 3.x
-gem "rouge", "~> 3.30.0"         # for syntax highlighting
+# GitHub Pages gem ensures GitHub-compatible versions
+gem "github-pages", "~> 231", group: :jekyll_plugins
 
+gem "webrick", "~> 1.7"  # Only needed for local dev with Ruby 3.x
+
+# Force a compatible version of Rouge if you prefer, or let github-pages handle it
+# gem "rouge", "~> 3.30"
+
+# Local dev plugins
 group :jekyll_plugins do
-  gem "jekyll-remote-theme", "~> 0.4.3"
-  gem "jekyll-feed", "~> 0.17.0"        # Version compatible with github-pages
-  gem "jekyll-seo-tag", "~> 2.8.0"
-  gem "jekyll-sitemap", "~> 1.4.0"
+  gem "jekyll-remote-theme"
+  # No need to list feed, sitemap, etc., because github-pages already includes them.
 end
