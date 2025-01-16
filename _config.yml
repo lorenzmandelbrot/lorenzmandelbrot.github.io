@@ -1,10 +1,10 @@
-title: Lorenz MandelBrot
-description: HFT Market Making
+title: "Lorenz MandelBrot"
+description: "HFT Market Making"
 remote_theme: b2a3e8/jekyll-theme-console
 
 # Site settings
 url: "https://lorenzmandelbrot.github.io"
-baseurl: ""
+baseurl: ""  # Keep this empty for a user/organization site
 
 # Theme settings
 style: dark
@@ -23,12 +23,15 @@ plugins:
 # Comments (using Giscus - GitHub Discussions based)
 comments:
   giscus:
-    repo: lorenzmandelbrot/lorenzmandelbrot.github.io
-    repo-id: R_kgDONpUgBw
+    repo: "lorenzmandelbrot/lorenzmandelbrot.github.io"
+    repo-id: "R_kgDONpUgBw"
     category: "Blog Comments"
-    category-id: DIC_kwDONpUgB84Cl9Ea
-    mapping: pathname
-    theme: dark
+    category-id: "DIC_kwDONpUgB84Cl9Ea"
+    mapping: "pathname"
+    theme: "dark"
     reactions-enabled: 1
     emit-metadata: 0
-    input-position: bottom
+    input-position: "bottom"
+
+# Syntax highlighting (Rouge is default, but you can set a theme if you want)
+highlighter: rouge

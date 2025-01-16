@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ page.title }}</title>
+  <!-- SEO Tag -->
+  {% seo %}
+  <!-- KaTeX CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <!-- Theme's default header stuff -->
+  {{ content | prepend: site.theme["header"] }}
+</head>
+<body>
+  <!-- Add main content -->
+  <div class="main-container">
+    {{ content }}
+  </div>
+
+  <!-- Giscus Comments (if enabled) -->
+  {% if site.comments and site.comments.giscus %}
+    {% include giscus.html %}
+  {% endif %}
+
+  <!-- KaTeX JS / Auto-render -->
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        // Custom KaTeX options
+        delimiters: [
+          {left: "$$", right: "$$", display: true},
+          {left: "$", right: "$", display: false},
+        ]
+      });
+    });
+  </script>
+</body>
+</html>
