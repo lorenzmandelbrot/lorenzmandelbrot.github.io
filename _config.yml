@@ -14,6 +14,25 @@ header_pages:
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+# GitHub Pages specific settings
+lsi: false
+safe: true
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
+
 plugins:
   - jekyll-remote-theme
   - jekyll-feed
@@ -32,6 +51,3 @@ comments:
     reactions-enabled: 1
     emit-metadata: 0
     input-position: "bottom"
-
-# Syntax highlighting (Rouge is default, but you can set a theme if you want)
-highlighter: rouge
